@@ -1,0 +1,14 @@
+.h1div{
+    text-align: center;
+    background-color: pink;
+}
+
+.mainrow{
+    background-color:aliceblue;
+    position: relative;
+    height: 1000px;
+}
+
+.listrow{
+    background-color: #EFDAD7;
+}

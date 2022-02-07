@@ -1,0 +1,42 @@
+<p>test works!</p>
+
+<button class="btn btn-primary"> Click here</button>
+
+<p [ngStyle]="choice?{color:choosencolor}:{color:'blue'}">Good Morning All.. </p>
+<p [ngClass]='disabled?"blueDisabled":"blueEnabled"'>ExpertzLAb</p>
+
+<div *ngIf="isStudent">
+    <p>Welcome to ExpertzLAb</p>
+</div>
+
+<div *ngIf="age>18"> 
+    <p>Eligible to Vote</p>
+</div>
+
+<div>
+    <ul>
+        <li *ngFor="let name of names">{{name}}</li>
+    </ul>
+</div>
+
+<div class="dropdown">
+    <select name="Colors" id="" (click)="setColor($event)">
+        <option *ngFor="let color of colors" >{{color}}</option>
+    </select>
+</div>
+
+<button (click)="clickAlert($event)">Click</button>
+<input type="text" (input)="getData($event)">
+
+{{pcolor}}
+<p [ngStyle]="{color:pcolor}">
+    My name is {{name}}
+</p>
+<button (click)="getDate()">Date</button>
+<div [ngClass]='count?"dayVisible":"dayHidden"'>
+    <div [ngSwitch]="day" >
+        <p *ngSwitchCase="6">Today is Saturday</p>
+        <p *ngSwitchCase="0">Today is Sunday</p>
+        <p *ngSwitchDefault>Looking forward to the Weekend...</p>
+    </div>
+</div>

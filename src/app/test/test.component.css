@@ -1,0 +1,19 @@
+.blueDisabled{
+    color:green;
+    font-size: 12px;
+    text-align: center;
+}
+
+.blueEnabled{
+    color: blue;
+    font-size: 20px;
+    text-align: center;
+}
+
+.dayHidden{
+    visibility: hidden;
+}
+
+.dayVisible{
+    visibility: visible;
+}

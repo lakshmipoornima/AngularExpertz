@@ -1,0 +1,50 @@
+<div class="h1div">
+    <h1>Todo App</h1>
+</div>
+
+<div class="row mainrow">
+    <div class="col-sm-6">
+        <input type="text" style="width: 100%;" (input)="getData($event)" value="{{task}}">
+        <br><br>
+        <button class="btn btn-success btn-lg" style="position: relative; left: 45%;" (click)="insertTodo() ">+</button>
+
+        <div>
+            <ul>
+
+                <li *ngFor="let task of todolist">
+                    <div class="row listrow">
+
+                        <div class="col-sm-10" style="color: rgb(39, 87, 68);font-size: 30px;font-family: 'Dancing Script', cursive;">
+                            {{task}}
+                        </div>
+                        <div class="col-sm-2">
+                            <button (click)="removeTask(task)" class="btn btn-info">
+                                <i class="bi bi-trash"></i>
+                            </button>&nbsp;
+                            <button (click)="addTask(task)" class="btn btn-info">
+                                <i class="bi bi-arrow-90deg-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="col-sm-6 ">
+        <p style="text-align: center;font-family: 'Dancing Script', cursive; font-size :30px;">Upcoming Tasks...</p>
+        <ul>
+            <li *ngFor="let task of upcominglist">
+                <div class="col-sm-12" style="color: rgb(39, 87, 68);font-size: 30px;font-family: 'Dancing Script', cursive;">
+                    {{task}}
+                </div>
+
+            </li>
+        </ul>
+    </div>
+
+</div>

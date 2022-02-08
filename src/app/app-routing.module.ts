@@ -11,7 +11,9 @@ const routes: Routes = [
   {
     path:"calc",
     component:CalculatorComponent
-  }
+  },
+  { path: 'customer', 
+  loadChildren: () => import('./customer/customer.module').then(m => m.CustomerModule) }
 ];
 
 @NgModule({
